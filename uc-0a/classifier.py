@@ -13,7 +13,7 @@ SEVERITY_KEYWORDS = [
     "injury", "child", "school", "hospital", "ambulance", "fire", "hazard", "fell", "collapse"
 ]
 
-def classify_complaint(row: dict) -> dict:
+def classify_complaint(row):
     """
     Classify a single complaint row.
     Returns: dict with keys: complaint_id, category, priority, reason, flag
@@ -52,7 +52,7 @@ def classify_complaint(row: dict) -> dict:
     }
 
 
-def batch_classify(input_path: str, output_path: str):
+def batch_classify(input_path, output_path):
     """
     Read input CSV, classify each row, write results CSV.
     
